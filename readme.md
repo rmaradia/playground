@@ -19,6 +19,8 @@ open terminal -> `docker ps`
 
 download github playground directory: 
 
+`git clone git@github.com:rmaradia/playground.git`
+
 ```
 docker-compose up --build
 ssh root@localhost -p 2222

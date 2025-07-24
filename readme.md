@@ -32,7 +32,7 @@ Grafana: `http://localhost:3000`
 ubuntu ssh 
 ```
 ssh root@localhost -p 2222
-# Password: password
+# Password: root
 ```
 
 Default credentials: `admin / admin`

@@ -17,6 +17,7 @@ run docker engine
 
 open terminal -> `docker ps`
 
+download github playground directory: 
 
 ```
 docker-compose up --build

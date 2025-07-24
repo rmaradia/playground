@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  ubuntu-node:
+    build: ./ubuntu
+    container_name: ubuntu-node
+    ports:
+      - "2222:22"              # SSH access
+      - "9100:9100"            # Node exporter port
+    networks:
+      - monitor-net
+    tty: true
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - monitor-net
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    networks:
+      - monitor-net
+
+networks:
+  monitor-net:
+    driver: bridge
+

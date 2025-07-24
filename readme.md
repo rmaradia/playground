@@ -23,14 +23,17 @@ download github playground directory:
 
 ```
 docker-compose up --build
-ssh root@localhost -p 2222
-# Password: password
 ```
 
 
 Access in Browser
 Prometheus: `http://localhost:9090`
 Grafana: `http://localhost:3000`
+ubuntu ssh 
+```
+ssh root@localhost -p 2222
+# Password: password
+```
 
 Default credentials: `admin / admin`
 

@@ -11,6 +11,13 @@ project/
 
 # steps:
 ```
+download docker engine on macbook
+run docker engine```
+
+open terminal -> `docker ps`
+
+
+```
 docker-compose up --build
 ssh root@localhost -p 2222
 # Password: password

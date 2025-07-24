@@ -12,7 +12,8 @@ project/
 # steps:
 ```
 download docker engine on macbook
-run docker engine```
+run docker engine
+```
 
 open terminal -> `docker ps`
 

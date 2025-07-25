@@ -2,6 +2,10 @@ global:
   scrape_interval: 15s
 
 scrape_configs:
-  - job_name: 'node'
+  - job_name: 'node1'
     static_configs:
-      - targets: ['ubuntu-node:9100']
+      - targets:
+          - ubuntu-node:9100
+          - ubuntu-node2:9100
+          - ubuntu-node3:9100
+

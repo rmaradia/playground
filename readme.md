@@ -35,14 +35,14 @@ docker-compose up --build -d
 ```sh
 # SSH into the Ubuntu container (default password: password)
 ssh root@localhost -p 2222
-# Password: password
+# Password: root
 ```
 
 ### 3. Access Monitoring Tools in Your Browser
 
 - **Prometheus:** [http://localhost:9090](http://localhost:9090)
 - **Grafana:** [http://localhost:3000](http://localhost:3000)
-  - Default credentials: `admin` / `admian` (note: 'admian' is not a typo)
+  - Default credentials: `admin` / `admin` 
 
 #### Grafana Setup (Automated)
 - **Prometheus datasource** is automatically configured at `http://localhost:9090`.

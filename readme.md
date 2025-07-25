@@ -13,11 +13,7 @@ project/
 ├── ubuntu/
 │   └── Dockerfile             # Dockerfile for custom Ubuntu container
 └── grafana/
-    ├── provisioning/
-    │   ├── dashboards/        # Provisioned dashboards (auto-loaded)
-    │   │   └── node-exporter-dashboard.json
-    │   └── datasources/       # Provisioned datasources (auto-loaded)
-    │       └── datasource.yaml
+    ├── simple-dashboard.json  # The only dashboard provisioned automatically
     └── ...                    # Persistent Grafana data
 ```
 
@@ -42,17 +38,12 @@ ssh root@localhost -p 2222
 
 - **Prometheus:** [http://localhost:9090](http://localhost:9090)
 - **Grafana:** [http://localhost:3000](http://localhost:3000)
-  - Default credentials: `admin` / `admin` 
+  - Default credentials: `admin` / `admin`
 
 #### Grafana Setup (Automated)
-- **Prometheus datasource** is automatically configured at `http://localhost:9090`.
-- **Node Exporter Full dashboard** (ID 1860) is automatically imported and available on first login.
-- All dashboards and datasources are persisted in the `grafana/` directory and survive container restarts.
-
-##### Customizing Dashboards and Datasources
-- To add or update dashboards, place JSON files in `grafana/provisioning/dashboards/`.
-- To add or update datasources, edit `grafana/provisioning/datasources/datasource.yaml`.
-- Changes require a Grafana container restart to take effect.
+- Only `simple-dashboard.json` is provisioned and loaded automatically on Grafana startup.
+- To update the dashboard, replace or edit `grafana/simple-dashboard.json` and restart the Grafana container.
+- All dashboards and settings are persisted in the `grafana/` directory and survive container restarts.
 
 ## Running Stress Tests
 

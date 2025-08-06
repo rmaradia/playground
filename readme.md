@@ -1,6 +1,6 @@
 # Project Setup and Monitoring
 
-This project provides a Docker-based environment with Prometheus and Grafana for monitoring, plus an Ubuntu container for running stress tests.
+This project provides a Docker-based environment with Prometheus and Grafana for monitoring, plus 10 Ubuntu containers for running stress tests.
 
 ## Project Structure
 
@@ -26,11 +26,20 @@ project/
 docker-compose up --build -d
 ```
 
-### 2. Access the Ubuntu Container
+### 2. Access Ubuntu Containers
 
 ```sh
-# SSH into the Ubuntu container (default password: password)
-ssh root@localhost -p 2222
+# SSH into any of the 10 Ubuntu containers (default password: password)
+ssh root@localhost -p 2222    # ubuntu-node
+ssh root@localhost -p 3333    # ubuntu-node2
+ssh root@localhost -p 4444    # ubuntu-node3
+ssh root@localhost -p 5555    # ubuntu-node4
+ssh root@localhost -p 6666    # ubuntu-node5
+ssh root@localhost -p 7777    # ubuntu-node6
+ssh root@localhost -p 8888    # ubuntu-node7
+ssh root@localhost -p 9999    # ubuntu-node8
+ssh root@localhost -p 11111   # ubuntu-node9
+ssh root@localhost -p 11112   # ubuntu-node10
 # Password: root
 ```
 
@@ -47,7 +56,7 @@ ssh root@localhost -p 2222
 
 ## Running Stress Tests
 
-Inside the Ubuntu container:
+Inside any Ubuntu container:
 
 ```sh
 # Update package lists and install stress-ng and ping
@@ -62,3 +71,6 @@ stress-ng --cpu 0 --cpu-load 74 --timeout 60s --metrics-brief
 
 Feel free to modify the configuration files to suit your needs. For more information, see the official documentation for [Prometheus](https://prometheus.io/docs/introduction/overview/) and [Grafana](https://grafana.com/docs/).
 
+
+
+Bla bla bla

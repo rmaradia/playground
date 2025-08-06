@@ -8,11 +8,4 @@ scrape_configs:
           - ubuntu-node:9100
           - ubuntu-node2:9100
           - ubuntu-node3:9100
-          - ubuntu-node4:9100
-          - ubuntu-node5:9100
-          - ubuntu-node6:9100
-          - ubuntu-node7:9100
-          - ubuntu-node8:9100
-          - ubuntu-node9:9100
-          - ubuntu-node10:9100
 
